@@ -59,6 +59,11 @@
 		<EwEBuildDateUtc>$([System.DateTime]::UtcNow.ToString("yyyy-MM-dd"))</EwEBuildDateUtc>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Remove="Tools\**" />
+	  <EmbeddedResource Remove="Tools\**" />
+	  <None Remove="Tools\**" />
+	</ItemGroup>
+	<ItemGroup>
 		<AssemblyMetadata Include="EwEBuildDateUtc" Value="$(EwEBuildDateUtc)" />
 	</ItemGroup>
   <ItemGroup>
@@ -105,9 +110,6 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Eii.Ecopath.ScientificInterfaceShared" Version="6.7.*" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tools\" />
   </ItemGroup>
   <PropertyGroup>
     <OutputPath Condition="'$(OutputPath)' == ''">bin\$(Configuration)\</OutputPath>
