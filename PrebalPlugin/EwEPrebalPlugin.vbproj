@@ -98,6 +98,9 @@
     </None>
     <None Update="UserGuide\Link - 2010 - Adding rigor to ecological network models by evalu.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackagePath>contentFiles\any\net48\</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

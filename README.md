@@ -10,6 +10,8 @@ Pre-balance diagnostics plug-in for Ecopath with Ecosim
 
 The package automatically places `EwEPrebalPlugin.dll` and its accompanying symbols and XML documentation (when copied) in `Plugins\PrebalPlugin\` beneath the consuming project's build output. SDK-style publish output uses the same layout, including publishing with `--no-build`. PackageReference consumers also inherit these rules through transitive package references.
 
+The UserGuide PDF is included in the package and copied to the consuming application's `UserGuide\` output subdirectory.
+
 Dependencies keep their normal output locations. The host must load the plugin from this subdirectory; installing the package does not configure assembly probing. The NuGet cache layout is unchanged.
 
 ## Build
