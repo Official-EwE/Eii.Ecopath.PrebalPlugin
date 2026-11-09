@@ -59,6 +59,11 @@
 		<EwEBuildDateUtc>$([System.DateTime]::UtcNow.ToString("yyyy-MM-dd"))</EwEBuildDateUtc>
 	</PropertyGroup>
 	<ItemGroup>
+	  <Compile Remove="Tools\**" />
+	  <EmbeddedResource Remove="Tools\**" />
+	  <None Remove="Tools\**" />
+	</ItemGroup>
+	<ItemGroup>
 		<AssemblyMetadata Include="EwEBuildDateUtc" Value="$(EwEBuildDateUtc)" />
 	</ItemGroup>
   <ItemGroup>
@@ -98,13 +103,13 @@
     </None>
     <None Update="UserGuide\Link - 2010 - Adding rigor to ecological network models by evalu.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Pack>true</Pack>
+      <PackagePath>contentFiles\any\net48\</PackagePath>
+      <PackageCopyToOutput>true</PackageCopyToOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Eii.Ecopath.ScientificInterfaceShared" Version="6.7.*" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tools\" />
   </ItemGroup>
   <PropertyGroup>
     <OutputPath Condition="'$(OutputPath)' == ''">bin\$(Configuration)\</OutputPath>
